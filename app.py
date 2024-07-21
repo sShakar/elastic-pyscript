@@ -18,7 +18,7 @@ def extract_table_from_pdf(pdf_path):
                 })
     return result
 
-@app.route('/pdf/extract', methods=['POST'])
+@app.route('/extract', methods=['POST'])
 def extract():
     if 'file' not in request.files:
         return jsonify({"error": "No file part"}), 400
